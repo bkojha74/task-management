@@ -4,6 +4,7 @@ go 1.22.4
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.5
+	github.com/gofiber/jwt/v3 v3.3.10
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	go.mongodb.org/mongo-driver v1.16.0
 	golang.org/x/crypto v0.22.0
