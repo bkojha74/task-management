@@ -4,7 +4,7 @@ A task manager application built with Go, Fiber, and MongoDB. This application p
 
 ## Author
 
-Bipin Kumar Ojha (Freelancer)
+Bipin Kumar Ojha (Software Engineer)
 
 ## Features
 
@@ -32,8 +32,8 @@ Bipin Kumar Ojha (Freelancer)
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/taskmanager.git
-    cd taskmanager
+    git clone https://github.com/bkojha74/task-management.git
+    cd task-management
     ```
 
 2. Set up environment variables:
