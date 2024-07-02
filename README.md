@@ -207,6 +207,9 @@ go test ./... -v
 │   ├── models.go
 ├── utils
 │   └── utils.go
+├── .gitignore
+├── go.mod
+├── go.sum
 ├── main.go
 ├── LICENSE
 └── README.md
