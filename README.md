@@ -119,7 +119,7 @@ go test ./... -v
     json
     {
         "title": "Test Task",
-        "description": "This is a test task"
+        "description": "This is a test task",
         "allotted_to": "testuser",
         "done_by": "",
         "status": "Pending",
