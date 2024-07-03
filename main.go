@@ -15,10 +15,7 @@ import (
 	"github.com/bkojha74/task-management/utils"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/gofiber/fiber/v2/middleware/limiter"
 	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 func main() {
@@ -52,16 +49,7 @@ func main() {
 	app := fiber.New()
 
 	// Middleware setup
-	app.Use(logger.New())  // Request logger middleware
-	app.Use(recover.New()) // Panic recovery middleware
-	app.Use(cors.New(cors.Config{
-		AllowOrigins: "https://cloud.mongodbs.com", // CORS configuration for allowed origins
-		AllowHeaders: "Origin, Content-Type, Accept, Authorization",
-	})) // CORS middleware
-	app.Use(limiter.New(limiter.Config{
-		Max:        20,        // Maximum number of requests per IP
-		Expiration: 60 * 1000, // Time window for rate limiting in milliseconds
-	})) // Request rate limiter middleware
+	app.Use(logger.New()) // Request logger middleware
 
 	// Initialize MongoDB connection
 	database.Init(mongoURI)
