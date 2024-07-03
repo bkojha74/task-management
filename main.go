@@ -36,7 +36,7 @@ func main() {
 
 	// Ensure required environment variables are set
 	if mongoURI == "" || jwtSecret == "" || appPort == "" || tokenExpiry == "" {
-		log.Fatal("Environment variables MONGO_URI, APP_PORT, JWT_SECRET, and TOKEN_EXPIRY_TIME must be set")
+		log.Fatal("Environment variables MONGO_URI, APP_PORT, JWT_SECRET and TOKEN_EXPIRY_TIME must be set")
 	}
 
 	// Convert TOKEN_EXPIRY_TIME to integer
