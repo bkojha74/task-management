@@ -9,7 +9,7 @@ Bipin Kumar Ojha (Software Engineer)
 ## Features
 
 - User sign-up and sign-in with JWT authentication
-- Create, read, update, and delete tasks
+- Create, read, update and delete tasks
 - Middleware for JWT authentication
 
 ## Technologies

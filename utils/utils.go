@@ -1,11 +1,7 @@
 package utils
 
 import (
-	"bytes"
-	"encoding/json"
 	"log"
-	"net/http"
-	"net/http/httptest"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
@@ -52,32 +48,4 @@ func JWTMiddleware(secret string) fiber.Handler {
 			return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{"error": "invalid JWT"})
 		}
 	}
-}
-
-// Post sends a POST request to the specified endpoint with optional body.
-func Post(app http.Handler, endpoint string, body []byte) *http.Request {
-	req, _ := http.NewRequest("POST", endpoint, bytes.NewBuffer(body))
-	req.Header.Set("Content-Type", "application/json")
-	return req
-}
-
-// Get sends a GET request to the specified endpoint.
-func Get(app http.Handler, endpoint string) *http.Request {
-	req, _ := http.NewRequest("GET", endpoint, nil)
-	return req
-}
-
-// PerformRequest performs an HTTP request against a handler and returns the response recorder.
-func PerformRequest(app http.Handler, method, path string, body []byte) *httptest.ResponseRecorder {
-	req := Post(app, path, body)
-	w := httptest.NewRecorder()
-	app.ServeHTTP(w, req)
-	return w
-}
-
-// ExtractToken extracts the JWT token from the response body map.
-func ExtractToken(body []byte) string {
-	var response map[string]string
-	json.Unmarshal(body, &response)
-	return response["token"]
 }
