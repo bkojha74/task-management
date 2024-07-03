@@ -191,20 +191,20 @@ go test ./... -v
 ```
 .
 ├── config
-│   ├── .env
+│   └── .env
 ├── database
 │   ├── database.go
-│   ├── database_test.go
+│   └── database_test.go
 ├── handlers
 │   ├── handlers_test.go
 │   ├── tasks.go
-│   ├── users.go
+│   └── users.go
 ├── helper
-│   ├── helper.go
+│   └── helper.go
 ├── middleware
-│   ├── middleware.go
+│   └── middleware.go
 ├── models
-│   ├── models.go
+│   └── models.go
 ├── utils
 │   └── utils.go
 ├── .gitignore
